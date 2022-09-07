@@ -8,18 +8,17 @@
 <?import javafx.stage.Stage?>
 
 <Stage xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="com.example.phonenumber.ControllerAddPanel">
+fx:controller="com.example.phonenumber.ControllerAddPanel" fx:id="stage">
     <scene>
         <Scene>
             <AnchorPane prefHeight="158.0" prefWidth="293.0">
-            <children>
                <Text layoutX="59.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
                <Text layoutX="14.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PhoneNumber : " />
-               <TextField layoutX="108.0" layoutY="22.0" />
-               <TextField layoutX="109.0" layoutY="67.0" />
+               <TextField fx:id="textField_name" layoutX="108.0" layoutY="22.0" />
+               <TextField fx:id="textField_phoneNumber" layoutX="109.0" layoutY="67.0" />
                <Button layoutX="202.0" layoutY="111.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Cancel" />
                <Button onAction="#save" layoutX="44.0" layoutY="111.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Save" />
-            </children></AnchorPane>
+          </AnchorPane>
         </Scene>
     </scene>
 </Stage>
