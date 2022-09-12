@@ -8,7 +8,11 @@ public class Contact {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
-
+    public Contact(String line){
+        String[] array = line.split(",");
+        this.name = array[0];
+        this.phoneNumber = array[1];
+    }
     public String getName() {
         return name;
     }
@@ -23,5 +27,10 @@ public class Contact {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return name+","+phoneNumber;
     }
 }

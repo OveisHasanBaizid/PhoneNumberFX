@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class ControllerAddPanel {
     @FXML
     TextField textField_name , textField_phoneNumber;
@@ -20,8 +22,14 @@ public class ControllerAddPanel {
         else if (DataBase.existContact(new Contact(textField_name.getText(),textField_phoneNumber.getText())))
             HelloApplication.showMessage("contact is exist.","Error");
         else{
-            DataBase.contacts.add(new Contact(textField_name.getText(),textField_phoneNumber.getText()));
+            Contact contact = new Contact(textField_name.getText(),textField_phoneNumber.getText());
+            DataBase.contacts.add(contact);
             HelloApplication.showMessage("contact added successfully.","Info");
+            try {
+                DataBase.saveToFile(contact);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             stage.close();
         }
     }
