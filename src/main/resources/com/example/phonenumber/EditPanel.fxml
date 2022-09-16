@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.stage.*?>
+
+<Stage fx:id="stage" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.phonenumber.ControllerEditPanel">
+    <scene>
+        <Scene>
+            <AnchorPane prefHeight="160.0" prefWidth="283.0">
+            <children>
+               <Text layoutX="63.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name : " />
+               <Text layoutX="14.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number : " />
+               <TextField fx:id="textField_name" layoutX="104.0" layoutY="34.0" />
+               <TextField fx:id="textField_phoneNumber" layoutX="104.0" layoutY="70.0" />
+               <Button layoutX="198.0" layoutY="115.0" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="55.0" text="Cancel" />
+               <Button onAction="#delete" layoutX="41.0" layoutY="115.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Delete" />
+               <Button onAction="#edit" layoutX="120.0" layoutY="115.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Edit" />
+            </children></AnchorPane>
+        </Scene>
+    </scene>
+</Stage>
